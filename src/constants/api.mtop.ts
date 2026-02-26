@@ -5,7 +5,7 @@ export const MTOP_CONFIG = {
   API_PREFIX: 'h5',
   APP_KEY: '34839810',
   JSV: '2.7.2',
-  TIMEOUT: 20000,
+  TIMEOUT: 30000,
   DATA_TYPE: 'json',
   TYPE: 'originaljson',
   SESSION_OPTION: 'AutoLoginOnly',

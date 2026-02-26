@@ -7,6 +7,7 @@ export interface GoofishConfig {
   // 基本配置
   level: LogLevel;
   cookie: string;
+  agent?: any;
 
   // 请求配置 mtop
   mtop: GoofishMtopRequestConfig;

@@ -28,6 +28,7 @@ import { HomeService } from '../services/mtop';
 import { generateUUID, generateSecureRandomString } from '../utils';
 import { AuthService } from '../services/im';
 
+
 export class Goofish {
   // Mtop HTTP 客户端
   private readonly httpMtop: HttpClient;
@@ -88,6 +89,7 @@ export class Goofish {
     this.config = {
       level: config.level || LogLevel.INFO,
       cookie: config.cookie || `cna=${generateSecureRandomString(24)}`,
+      agent: config.agent,
 
       // Mtop 配置
       mtop: {
@@ -135,12 +137,15 @@ export class Goofish {
         userAgent: config.headers?.userAgent || API_CONFIG.USER_AGENT,
       },
     };
+    const agent = this.config.agent;
 
     // 创建 HTTP 客户端
     this.httpMtop = new HttpClient({
       baseURL: this.config.mtop.baseURL,
       axiosConfig: {
         withCredentials: true,
+        httpAgent: agent,
+        httpsAgent: agent,
       },
     });
 
@@ -148,6 +153,8 @@ export class Goofish {
       baseURL: this.config.passport.baseURL,
       axiosConfig: {
         withCredentials: true,
+        httpAgent: agent,
+        httpsAgent: agent,
       },
     });
 
