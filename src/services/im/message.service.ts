@@ -1,6 +1,5 @@
 import { IM_ENDPOINTS } from '../../constants';
 import type {
-  DecodedMessage,
   DecodedSyncItem,
   FormattedMessage,
   SendMessageByReceiverScopeRequest,
@@ -137,7 +136,7 @@ export class MessageService extends BaseImService {
       for (const item of items) {
         if (item.decoded && !item.error) {
           try {
-            const formatted = formatMessage(item.decoded as DecodedMessage);
+            const formatted = formatMessage(item.decoded);
             handler(formatted);
           } catch {
             // 忽略格式化错误
