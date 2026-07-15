@@ -75,7 +75,7 @@
     "ws": "^8.18.0"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^10.0.1",
+    "@release-it/conventional-changelog": "^11.0.1",
     "@types/crypto-js": "^4.2.2",
     "@types/node": "^24.3.0",
     "@types/ws": "^8.5.13",
@@ -83,7 +83,7 @@
     "@typescript-eslint/parser": "^8.37.0",
     "eslint": "^9.31.0",
     "globals": "^16.3.0",
-    "release-it": "^19.0.4",
+    "release-it": "^20.2.1",
     "tsup": "^8.5.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
@@ -103,5 +103,12 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "allowScripts": {
+    "esbuild@0.27.7": true,
+    "esbuild@0.28.1": true,
+    "esbuild@0.21.5": true,
+    "msgpackr-extract": false,
+    "fsevents": false
   }
 }
