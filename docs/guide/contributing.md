@@ -101,8 +101,8 @@
 
 ### 系统要求
 
-- Node.js 14+
-- npm 或 yarn
+- Node.js 20.19.0+（开发与发布工具要求；库本身仍支持 Node.js 14+）
+- npm（仓库使用 package-lock.json）
 
 ### 项目结构
 
