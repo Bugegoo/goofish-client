@@ -413,9 +413,9 @@ export class WsClient {
    */
   get readyState(): WsReadyState {
     if (!this.ws) {
-      return WebSocket.CLOSED as WsReadyState;
+      return WebSocket.CLOSED;
     }
-    return this.ws.readyState as WsReadyState;
+    return this.ws.readyState;
   }
 
   /**

@@ -70,7 +70,7 @@ export function createLogInterceptor(): LogInterceptor {
         method: config.method || '',
         url: config.url || '',
         data: config.data,
-        headers: config.headers as Record<string, unknown>,
+        headers: config.headers,
         params: config.params as Record<string, unknown>,
         cookie: config.headers?.Cookie || config.headers?.cookie,
       });
