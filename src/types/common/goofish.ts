@@ -1,3 +1,4 @@
+import type { Agent } from 'node:http';
 import type { LogLevel } from '../../utils';
 
 /**
@@ -7,7 +8,7 @@ export interface GoofishConfig {
   // 基本配置
   level: LogLevel;
   cookie: string;
-  agent?: any;
+  agent?: Agent;
 
   // 请求配置 mtop
   mtop: GoofishMtopRequestConfig;
